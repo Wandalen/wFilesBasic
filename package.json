@@ -16,7 +16,7 @@
   {
     "url" : "https://github.com/Wandalen/wFilesBasic/issues"
   },
-  "dependencies" : { "wTools" : "" },
-  "devDependencies" : { "wTesting" : "", "eslint" : "7.1.0", "wfilesbasic" : "file:." },
+  "dependencies" : { "wTools" : "alpha" },
+  "devDependencies" : { "eslint" : "7.1.0", "wfilesbasic" : "file:.", "wTesting" : "alpha" },
   "keywords" : [ "wTools" ]
 }
