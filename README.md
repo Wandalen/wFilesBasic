@@ -1,5 +1,5 @@
 
-# module::FilesBasic [![Status](https://img.shields.io/circleci/build/github/Wandalen/wFilesBasic?label=Test&logo=Test)](https://circleci.com/gh/Wandalen/wFilesBasic) [![Status](https://github.com/Wandalen/wFilesBasic/workflows/Test/badge.svg)](https://github.com/Wandalen/wFilesBasic/actions?query=workflow%3ATest) [![experimental](https://img.shields.io/badge/stability-experimental-orange.svg)](https://github.com/emersion/stability-badges#experimental)
+# module::FilesBasic  [![Status](https://github.com/Wandalen/wFilesBasic/workflows/Test/badge.svg)](https://github.com/Wandalen/wFilesBasic/actions?query=workflow%3ATest) [![experimental](https://img.shields.io/badge/stability-experimental-orange.svg)](https://github.com/emersion/stability-badges#experimental)
 
 ___
 
