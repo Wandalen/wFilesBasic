@@ -10,7 +10,7 @@ if( typeof module !== 'undefined' )
 {
   const _ = require( '../../../node_modules/Tools' );
   if( !_global_.wTools.FileProvider )
-  require( '../l4_files/entry/Files.s' );
+  require( '../l4_files/entry/Basic.s' );
   _.include( 'wTesting' );
   // waitSync = require( 'wait-sync' );
 }

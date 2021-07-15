@@ -10,7 +10,7 @@ if( typeof module !== 'undefined' )
   const _ = require( '../../../node_modules/Tools' );
   debugger;
   _.include( 'wTesting' );
-  require( '../l4_files/entry/Files.s' );
+  require( '../l4_files/entry/Basic.s' );
   crypto = require( 'crypto' );
 }
 
@@ -1699,7 +1699,7 @@ function filesFind( test )
     // var tester = path.globRegexpsForTerminal( glob, routinePath, info.filter.basePath );
     var tester = path.globsFullToRegexps( glob, routinePath, info.filter.basePath /*, true */).actual;
 
-    var expected = allFiles.slice();
+    var expected = allBasic.slice();
     expected = expected.filter( ( p ) =>
     {
       return tester.test( './' + path.relative( routinePath, p ) )
