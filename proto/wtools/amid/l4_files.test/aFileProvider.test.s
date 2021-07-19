@@ -6,7 +6,6 @@
 let crypto;
 if( typeof module !== 'undefined' )
 {
-  debugger;
   const _ = require( '../../../node_modules/Tools' );
   require( '../l4_files/entry/Basic.s' );
   _.include( 'wTesting' );
