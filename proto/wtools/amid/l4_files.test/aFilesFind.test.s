@@ -1699,7 +1699,7 @@ function filesFind( test )
     // var tester = path.globRegexpsForTerminal( glob, routinePath, info.filter.basePath );
     var tester = path.globsFullToRegexps( glob, routinePath, info.filter.basePath /*, true */).actual;
 
-    var expected = allBasic.slice();
+    var expected = allFiles.slice();
     expected = expected.filter( ( p ) =>
     {
       return tester.test( './' + path.relative( routinePath, p ) )
