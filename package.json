@@ -1,6 +1,6 @@
 {
   "name": "wfilesbasic",
-  "version": "0.2.91",
+  "version": "0.2.92",
   "description": "Collection of basic classes to abstract files systems and partly good defined API for general algorithms on files.",
   "author": "Kostiantyn Wandalen <wanalen@01.school>",
   "contributors": [
@@ -29,20 +29,20 @@
     "url": "https://github.com/Wandalen/wFilesBasic/issues"
   },
   "dependencies": {
-    "wweburibasic": "latest",
-    "wverbal": "latest",
-    "wuribasic": "latest",
-    "wTools": "latest",
-    "wselector": "latest",
-    "wRegexpObject": "latest",
-    "wprocess": "latest",
-    "wLogger": "latest",
-    "wintrospectorbasic": "latest",
-    "wfieldsstack": "latest",
+    "wweburibasic": "delta",
+    "wverbal": "delta",
+    "wuribasic": "delta",
+    "wTools": "delta",
+    "wselector": "delta",
+    "wRegexpObject": "delta",
+    "wprocess": "delta",
+    "wLogger": "delta",
+    "wintrospectorbasic": "delta",
+    "wfieldsstack": "delta",
     "proper-lockfile": "=4.1.1"
   },
   "devDependencies": {
-    "wTesting": "latest",
+    "wTesting": "delta",
     "eslint": "7.1.0"
   },
   "keywords": [
