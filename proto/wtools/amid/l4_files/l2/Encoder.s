@@ -190,7 +190,7 @@ function withGdf( gdf )
 function _fromGdf( gdf )
 {
 
-  _.assert( gdf.ext.length > 0 );
+  // _.assert( gdf.ext.length > 0 );
   _.assert( gdf instanceof _.gdf.Encoder );
 
   let encoder = Object.create( null );
