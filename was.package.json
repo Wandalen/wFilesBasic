@@ -1,6 +1,6 @@
 {
   "name": "wfilesbasic",
-  "version": "0.2.93",
+  "version": "0.2.94",
   "description": "Collection of basic classes to abstract files systems and partly good defined API for general algorithms on files.",
   "author": "Kostiantyn Wandalen <wanalen@01.school>",
   "contributors": [
