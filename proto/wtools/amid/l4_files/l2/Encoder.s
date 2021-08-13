@@ -302,7 +302,7 @@ function fromGdfs()
   writeGdf.forEach( ( gdf ) =>
   {
     let encoder = _.files.encoder.writerFromGdf( gdf );
-    _.assert( gdf.ext.length > 0 );
+    // _.assert( gdf.ext.length > 0 );
     // _.each( gdf.ext, ( ext ) =>
     // {
     //   if( !WriteEndoders[ ext ] || gdf.feature.default )
