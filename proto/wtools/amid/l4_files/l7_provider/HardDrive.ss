@@ -497,19 +497,14 @@ function fileReadAct( o )
   let stack = null;
   let result = null;
 
-  // _.routine.assertOptions( fileReadAct, arguments );
   _.map.assertHasAll( o, fileReadAct.defaults );
   _.assert( self.path.isNormalized( o.filePath ) );
-  // _.assert( o.fileProvider === self );
 
   let filePath = self.path.nativize( o.filePath );
 
-  // if( Config.debug )
-  // if( !o.sync )
-  // stack = _.introspector.stack([ 1, Infinity ]);
-
   o.fileProvider = self;
   o.encoder = fileReadAct.encoders[ o.encoding ];
+  // _.assert( o.encoding === null || o.encoding === undefined || _.object.is( o.encoder ), `encoder::${o.encoding} is not registered` );
   if( o.encoder && o.encoder.onSelect )
   o.encoder.onSelect.call( self, o );
 
@@ -620,13 +615,12 @@ function streamReadAct( o )
   let self = this;
   let result;
 
-  // _.assert( o.fileProvider === self );
-
   _.routine.assertOptions( streamReadAct, arguments );
 
   o.fileProvider = self;
   o.encoder = fileReadAct.encoders[ o.encoding ];
-  if( o.encoder && o.encoder.onSelect)
+  // _.assert( o.encoding === null || o.encoding === undefined || _.object.is( o.encoder ), `encoder::${o.encoding} is not registered` );
+  if( o.encoder && o.encoder.onSelect )
   o.encoder.onSelect.call( self, o );
 
   let filePath = self.path.nativize( o.filePath );
@@ -1015,11 +1009,11 @@ function fileWriteAct( o )
   _.routine.assertOptions( fileWriteAct, arguments );
   _.assert( self.path.isNormalized( o.filePath ) );
   _.assert( self.WriteMode.indexOf( o.writeMode ) !== -1 );
-  // _.assert( o.fileProvider === self );
 
   o.fileProvider = self;
   o.encoder = fileWriteAct.encoders[ o.encoding ];
-  if( o.encoder && o.encoder.onSelect)
+  // _.assert( o.encoding === null || o.encoding === undefined || _.object.is( o.encoder ), `encoder::${o.encoding} is not registered` );
+  if( o.encoder && o.encoder.onSelect )
   o.encoder.onSelect.call( self, o );
 
   if( o.encoder && o.encoder.onBegin )

@@ -4857,6 +4857,8 @@ function fileWrite_body( o )
   o.encoding = _.files.encoder.deduce({ filePath : o.filePath, returning : 'name', feature : { writer : true } });
   let encoder = _.files.WriteEncoders[ o.encoding ];
 
+  // _.assert( o.encoding === null || o.encoding === undefined || !!encoder, `WriteEncoder::${o.encoding} is not registered` );
+
   let o2 = _.mapOnly_( null, o, self.fileWriteAct.defaults );
 
   if( encoder && encoder.onBegin )

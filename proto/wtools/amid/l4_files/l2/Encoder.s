@@ -62,9 +62,13 @@ function _normalize( o )
 
   let collectionMap = o.feature.reader ? _.files.ReadEncoders : _.files.WriteEncoders;
 
-  if( o.name === null && o.exts.length )
-  o.name = nameGenerate();
-
+  if( o.name === null )
+  {
+    if( o.exts.length )
+    o.name = nameGenerate();
+    else
+    o.name = o.gdf.shortName;
+  }
   _.assert( _.strDefined( o.name ) );
   // _.assert( _.routineIs( o.onData ) ); /* xxx : implement */
 
@@ -110,10 +114,12 @@ function _registerWithExt( o, ext )
   o = _.files.encoder._normalize( o );
 
   let collectionMap = o.feature.reader ? _.files.ReadEncoders : _.files.WriteEncoders;
-  let name = ext ? ext : o.name;
+  // let name = ext ? ext : o.name;
+  let name = ext ? ext : ( o.name || o.gdf.shortName );
 
   _.assert( arguments.length === 1 || arguments.length === 2 );
   _.assert( ext === undefined || _.strDefined( ext ) );
+  _.assert( _.strDefined( name ) );
 
   if( collectionMap[ name ] !== undefined )
   {
@@ -134,7 +140,6 @@ function _registerWithExt( o, ext )
   // console.log( `Registered encoder::${name}` );
 
   collectionMap[ name ] = o;
-
   return o;
 }
 
@@ -228,6 +233,11 @@ function writerFromGdf( gdf )
     op.operation.encoding = encoded.out.format;
   }
 
+  if( !gdf.ext.length )
+  {
+    _.files.encoder._registerWithExt( encoder );
+  }
+  else
   _.each( gdf.ext, ( ext ) =>
   {
     _.files.encoder._registerWithExt( encoder, ext );
@@ -264,6 +274,11 @@ function readerFromGdf( gdf )
     op.data = decoded.out.data;
   }
 
+  if( !gdf.ext.length )
+  {
+    _.files.encoder._registerWithExt( encoder );
+  }
+  else
   _.each( gdf.ext, ( ext ) =>
   {
     _.files.encoder._registerWithExt( encoder, ext );
@@ -301,13 +316,9 @@ function fromGdfs()
 
   writeGdf.forEach( ( gdf ) =>
   {
+    if( gdf.shortName === 'js.structure.exported' )
+    debugger;
     let encoder = _.files.encoder.writerFromGdf( gdf );
-    // _.assert( gdf.ext.length > 0 );
-    // _.each( gdf.ext, ( ext ) =>
-    // {
-    //   if( !WriteEndoders[ ext ] || gdf.feature.default )
-    //   _.files.encoder._registerWithExt( encoder, ext );
-    // })
   })
 
   /* */
@@ -316,12 +327,6 @@ function fromGdfs()
   {
     let encoder = _.files.encoder.readerFromGdf( gdf );
     _.assert( gdf.ext.length > 0 );
-    // _.each( gdf.ext, ( ext ) =>
-    // {
-    //   debugger;
-    //   if( !ReadEncoders[ ext ] || gdf.feature.default )
-    //   _.files.encoder._registerWithExt( encoder, ext );
-    // })
   })
 
   /* */
@@ -341,9 +346,9 @@ function fromGdfs()
   {
     let gdf = _.files.WriteEncoders[ k ].gdf;
     if( gdf )
-    if( !_.longHas( writeGdf, gdf ) || !_.longHas( gdf.ext, k ) )
+    if( !_.longHas( writeGdf, gdf ) || ( gdf.ext.length && !_.longHas( gdf.ext, k ) ) )
     {
-      // _.assert( 0, 'not tested' );
+      debugger;
       delete _.files.WriteEncoders[ k ];
     }
   }

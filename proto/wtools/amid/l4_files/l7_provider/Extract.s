@@ -310,13 +310,12 @@ function fileReadAct( o )
 
   _.assert( arguments.length === 1, 'Expects single argument' );
   _.map.assertHasAll( o, fileReadAct.defaults );
-  // _.routine.assertOptions( fileReadAct, o );
   _.assert( _.strIs( o.encoding ) );
-  // _.assert( o.fileProvider === self );
 
-  // let encoder = fileReadAct.encoders[ o.encoding ];
+  let encoderName = o.encoder;
   o.fileProvider = self;
   o.encoder = fileReadAct.encoders[ o.encoding ];
+  // _.assert( o.encoding === null || o.encoding === undefined || _.object.is( o.encoder ), `encoder::${o.encoding} is not registered` );
   if( o.encoder && o.encoder.onSelect)
   o.encoder.onSelect.call( self, o );
 
@@ -690,6 +689,7 @@ function fileWriteAct( o )
 
   o.fileProvider = self;
   o.encoder = fileWriteAct.encoders[ o.encoding ];
+  // _.assert( o.encoding === null || o.encoding === undefined || _.object.is( o.encoder ), `encoder::${o.encoding} is not registered` );
   if( o.encoder && o.encoder.onSelect)
   o.encoder.onSelect.call( self, o );
 
