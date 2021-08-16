@@ -316,8 +316,8 @@ function fromGdfs()
 
   writeGdf.forEach( ( gdf ) =>
   {
-    if( gdf.shortName === 'js.structure.exported' )
-    debugger;
+    // if( gdf.shortName === 'js.structure.exported' )
+    // debugger;
     let encoder = _.files.encoder.writerFromGdf( gdf );
   })
 
