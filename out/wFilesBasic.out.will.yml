@@ -3,8 +3,8 @@ root:
   - wFilesBasic.out
 consistency:
   ../will.yml: &ref_0
-    hash: 9da0285fb978a5ab41a8c1c7a5be2893
-    size: 7540
+    hash: 33fa3f8963d1e68c1b0831e4f641d288
+    size: 7570
 module:
   wFilesBasic.out:
     about:
@@ -249,36 +249,38 @@ module:
         path: 'npm:///wselector'
         autoExporting: 0
         enabled: 0
-      wRegexpObject:
-        path: 'npm:///wRegexpObject'
-        autoExporting: 0
-        enabled: 0
       wfieldsstack:
         path: 'npm:///wfieldsstack'
-        autoExporting: 0
-        enabled: 0
-      wintrospectorbasic:
-        path: 'npm:///wintrospectorbasic'
         autoExporting: 0
         enabled: 0
       wverbal:
         path: 'npm:///wverbal'
         autoExporting: 0
         enabled: 0
+      wintrospectorbasic:
+        path: 'npm:///wintrospectorbasic'
+        autoExporting: 0
+        enabled: 0
+      wgdf:
+        path: 'npm:///wgdf'
+        autoExporting: 0
+        enabled: 0
+      wConsequence:
+        path: 'npm:///wConsequence'
+        autoExporting: 0
+        enabled: 0
       wLogger:
         path: 'npm:///wLogger'
+        autoExporting: 0
+        enabled: 0
+      wRegexpObject:
+        path: 'npm:///wRegexpObject'
         autoExporting: 0
         enabled: 0
       proper-lockfile:
         path: 'npm:///proper-lockfile#4.1.1'
         autoExporting: 0
         enabled: 0
-      wFiles:
-        path: 'hd://..'
-        autoExporting: 0
-        enabled: 0
-        criterion:
-          development: 1
       eslint:
         path: 'npm:///eslint#7.1.0'
         autoExporting: 0
@@ -1029,36 +1031,38 @@ module:
         path: 'npm:///wselector'
         autoExporting: 0
         enabled: 0
-      wRegexpObject:
-        path: 'npm:///wRegexpObject'
-        autoExporting: 0
-        enabled: 0
       wfieldsstack:
         path: 'npm:///wfieldsstack'
-        autoExporting: 0
-        enabled: 0
-      wintrospectorbasic:
-        path: 'npm:///wintrospectorbasic'
         autoExporting: 0
         enabled: 0
       wverbal:
         path: 'npm:///wverbal'
         autoExporting: 0
         enabled: 0
+      wintrospectorbasic:
+        path: 'npm:///wintrospectorbasic'
+        autoExporting: 0
+        enabled: 0
+      wgdf:
+        path: 'npm:///wgdf'
+        autoExporting: 0
+        enabled: 0
+      wConsequence:
+        path: 'npm:///wConsequence'
+        autoExporting: 0
+        enabled: 0
       wLogger:
         path: 'npm:///wLogger'
+        autoExporting: 0
+        enabled: 0
+      wRegexpObject:
+        path: 'npm:///wRegexpObject'
         autoExporting: 0
         enabled: 0
       proper-lockfile:
         path: 'npm:///proper-lockfile#4.1.1'
         autoExporting: 0
         enabled: 0
-      wFiles:
-        path: 'hd://.'
-        autoExporting: 0
-        enabled: 0
-        criterion:
-          development: 1
       eslint:
         path: 'npm:///eslint#7.1.0'
         autoExporting: 0
@@ -1603,5 +1607,5 @@ module:
           - 'build::npm'
     consistency:
       ../will.yml:
-        hash: 9da0285fb978a5ab41a8c1c7a5be2893
-        size: 7540
+        hash: 33fa3f8963d1e68c1b0831e4f641d288
+        size: 7570

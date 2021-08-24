@@ -1,6 +1,6 @@
 {
   "name": "wfilesbasic",
-  "version": "0.2.99",
+  "version": "0.2.100",
   "description": "Collection of basic classes to abstract files systems and partly good defined API for general algorithms on files.",
   "author": "Kostiantyn Wandalen <wanalen@01.school>",
   "contributors": [
@@ -37,7 +37,9 @@
     "wRegexpObject": "delta",
     "wLogger": "delta",
     "wintrospectorbasic": "delta",
+    "wgdf": "delta",
     "wfieldsstack": "delta",
+    "wConsequence": "delta",
     "proper-lockfile": "=4.1.1"
   },
   "devDependencies": {
