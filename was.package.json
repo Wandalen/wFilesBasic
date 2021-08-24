@@ -29,15 +29,17 @@
     "url": "https://github.com/Wandalen/wFilesBasic/issues"
   },
   "dependencies": {
+    "wTools": "",
     "wweburibasic": "",
     "wverbal": "",
     "wuribasic": "",
-    "wTools": "",
     "wselector": "",
-    "wRegexpObject": "",
-    "wLogger": "",
-    "wintrospectorbasic": "",
     "wfieldsstack": "",
+    "wintrospectorbasic": "",
+    "wgdf": "",
+    "wConsequence": "",
+    "wLogger": "",
+    "wRegexpObject": "",
     "proper-lockfile": "=4.1.1"
   },
   "devDependencies": {

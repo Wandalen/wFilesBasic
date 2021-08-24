@@ -313,29 +313,30 @@ submodule:
   wselector:
     path: 'npm:///wselector'
     enabled: 0
-  wRegexpObject:
-    path: 'npm:///wRegexpObject'
-    enabled: 0
   wfieldsstack:
     path: 'npm:///wfieldsstack'
-    enabled: 0
-  wintrospectorbasic:
-    path: 'npm:///wintrospectorbasic'
     enabled: 0
   wverbal:
     path: 'npm:///wverbal'
     enabled: 0
+  wintrospectorbasic:
+    path: 'npm:///wintrospectorbasic'
+    enabled: 0
+  wgdf:
+    path: 'npm:///wgdf'
+    enabled: 0
+  wConsequence:
+    path: 'npm:///wConsequence'
+    enabled: 0
   wLogger:
     path: 'npm:///wLogger'
+    enabled: 0
+  wRegexpObject:
+    path: 'npm:///wRegexpObject'
     enabled: 0
   proper-lockfile:
     path: 'npm:///proper-lockfile#4.1.1'
     enabled: 0
-  wFiles:
-    path: 'hd://.'
-    enabled: 0
-    criterion:
-      development: 1
   eslint:
     path: 'npm:///eslint#7.1.0'
     enabled: 0
