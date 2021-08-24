@@ -11,7 +11,7 @@ _.assert( _.object.isBasic( _.path ) );
 // --
 // path
 // --
-
+//
 /**
  * Returns path for main module (module that running directly by node).
  * @returns {String}
@@ -19,14 +19,14 @@ _.assert( _.object.isBasic( _.path ) );
  * @namespace wTools.path
  * @module Tools/mid/Files
  */
-
-function realMainFile()
-{
-  return _.process.realMainFile();
-}
-
 //
-
+// function realMainFile()
+// {
+//   return _.process.realMainFile();
+// }
+//
+// //
+//
 /**
  * Returns path dir name for main module (module that running directly by node).
  * @returns {String}
@@ -34,14 +34,14 @@ function realMainFile()
  * @namespace wTools.path
  * @module Tools/mid/Files
  */
-
-function realMainDir()
-{
-  return _.process.realMainDir();
-}
-
 //
-
+// function realMainDir()
+// {
+//   return _.process.realMainDir();
+// }
+//
+// //
+//
 /**
  * Returns absolute path for file running directly by node
  * @returns {String}
@@ -50,14 +50,14 @@ function realMainDir()
  * @namespace wTools.path
  * @module Tools/mid/Files
  */
-
-function effectiveMainFile()
-{
-  return _.process.effectiveMainFile();
-}
-
 //
-
+// function effectiveMainFile()
+// {
+//   return _.process.effectiveMainFile();
+// }
+//
+// //
+//
 /**
  * Returns path dirname for file running directly by node
  * @returns {String}
@@ -66,15 +66,15 @@ function effectiveMainFile()
  * @namespace wTools.path
  * @module Tools/mid/Files
  */
-
-function effectiveMainDir()
-{
-  _.assert( arguments.length === 0, 'Expects no arguments' );
-
-  let result = this.dir( this.effectiveMainFile() );
-
-  return result;
-}
+//
+// function effectiveMainDir()
+// {
+//   _.assert( arguments.length === 0, 'Expects no arguments' );
+//
+//   let result = this.dir( this.effectiveMainFile() );
+//
+//   return result;
+// }
 
 //
 
@@ -744,11 +744,11 @@ firstAvailable.having.aspect = 'entry';
 let Extension =
 {
 
-  realMainFile,
-  realMainDir,
-
-  effectiveMainFile,
-  effectiveMainDir,
+  // realMainFile,
+  // realMainDir,
+  //
+  // effectiveMainFile,
+  // effectiveMainDir,
 
   resolveTextLink,
   // _resolveTextLink,
