@@ -319,9 +319,6 @@ submodule:
   wfieldsstack:
     path: 'npm:///wfieldsstack'
     enabled: 0
-  wprocess:
-    path: 'npm:///wprocess'
-    enabled: 0
   wintrospectorbasic:
     path: 'npm:///wintrospectorbasic'
     enabled: 0
