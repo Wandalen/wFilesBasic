@@ -782,30 +782,30 @@ function regexpMakeSafe( test )
 
 }
 
+// //
 //
-
-function effectiveMainDir( test )
-{
-  if( require.main === module )
-  var file = __filename;
-  else
-  var file = process.argv[ 1 ];
-
-  var expected1 = _.path.dir( file );
-
-  test.case = 'compare with __filename path dir';
-  var got = _.fileProvider.path.nativize( _.path.effectiveMainDir( ) );
-  test.identical( _.path.normalize( got ), _.path.normalize( expected1 ) );
-
-  if( Config.debug )
-  {
-    test.case = 'extra arguments';
-    test.shouldThrowErrorSync( function( )
-    {
-      _.path.effectiveMainDir( 'package.json' );
-    } );
-  }
-};
+// function effectiveMainDir( test )
+// {
+//   if( require.main === module )
+//   var file = __filename;
+//   else
+//   var file = process.argv[ 1 ];
+//
+//   var expected1 = _.path.dir( file );
+//
+//   test.case = 'compare with __filename path dir';
+//   var got = _.fileProvider.path.nativize( _.path.effectiveMainDir( ) );
+//   test.identical( _.path.normalize( got ), _.path.normalize( expected1 ) );
+//
+//   if( Config.debug )
+//   {
+//     test.case = 'extra arguments';
+//     test.shouldThrowErrorSync( function( )
+//     {
+//       _.path.effectiveMainDir( 'package.json' );
+//     } );
+//   }
+// }
 
 //
 
@@ -1355,6 +1355,7 @@ function tempCloseAfter( test )
   function program()
   {
     const _ = require( toolsPath );
+    _.include( 'wProcess' );
     _.include( 'wFilesBasic' );
     var tempPath = _.path.tempOpen( _.path.normalize( __dirname ), 'tempCloseAfter' );
     if( _.fileProvider.isDir( tempPath ) )
@@ -1992,7 +1993,7 @@ const Proto =
 
     regexpMakeSafe,
 
-    effectiveMainDir,
+    // effectiveMainDir,
 
     pathCurrent,
     pathCurrent2,
