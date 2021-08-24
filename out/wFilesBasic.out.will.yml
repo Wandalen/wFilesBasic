@@ -3,8 +3,8 @@ root:
   - wFilesBasic.out
 consistency:
   ../will.yml: &ref_0
-    hash: 0bbe20d4f3d4c1b98effe336facfbcc0
-    size: 7595
+    hash: 9da0285fb978a5ab41a8c1c7a5be2893
+    size: 7540
 module:
   wFilesBasic.out:
     about:
@@ -255,10 +255,6 @@ module:
         enabled: 0
       wfieldsstack:
         path: 'npm:///wfieldsstack'
-        autoExporting: 0
-        enabled: 0
-      wprocess:
-        path: 'npm:///wprocess'
         autoExporting: 0
         enabled: 0
       wintrospectorbasic:
@@ -1041,10 +1037,6 @@ module:
         path: 'npm:///wfieldsstack'
         autoExporting: 0
         enabled: 0
-      wprocess:
-        path: 'npm:///wprocess'
-        autoExporting: 0
-        enabled: 0
       wintrospectorbasic:
         path: 'npm:///wintrospectorbasic'
         autoExporting: 0
@@ -1611,5 +1603,5 @@ module:
           - 'build::npm'
     consistency:
       ../will.yml:
-        hash: 0bbe20d4f3d4c1b98effe336facfbcc0
-        size: 7595
+        hash: 9da0285fb978a5ab41a8c1c7a5be2893
+        size: 7540
