@@ -19,7 +19,7 @@ if( typeof module !== 'undefined' )
   _.include( 'wVerbal' );
 
   _.include( 'wSelector' );
-  _.include( 'wProcess' );
+  // _.include( 'wProcess' );
   _.include( 'wIntrospectorBasic' );
   _.include( 'wLogger' );
   _.include( 'wWebUriBasic' );
