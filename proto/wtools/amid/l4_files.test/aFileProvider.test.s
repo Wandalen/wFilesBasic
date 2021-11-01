@@ -6744,10 +6744,9 @@ function fileCopyAsync( test )
   let path = provider.path;
 
   if( !_.routineIs( provider.fileCopyAct ) )
-  {
-    test.identical( 1, 1 );
-    return;
-  }
+  return test.identical( 1, 1 );
+
+  /* */
 
   var routinePath = test.context.pathFor( 'written/fileCopyAsync' );
 
@@ -6757,12 +6756,11 @@ function fileCopyAsync( test )
   var srcPath = test.context.pathFor( 'written/fileCopyAsync/src.txt' );
   var dstPath = test.context.pathFor( 'written/fileCopyAsync/dst.txt' );
 
-  var consequence = new _.Consequence().take( null );
+  var consequence = new _.take( null );
 
   /* - */
 
-  consequence
-  .ifNoErrorThen( function( arg )
+  consequence.ifNoErrorThen( function( arg )
   {
     test.case = 'src not exist';
     return null;
@@ -6780,7 +6778,7 @@ function fileCopyAsync( test )
       rewriting : 1,
       throwing : 1,
     });
-    return test.shouldThrowErrorOfAnyKind( con );
+    return test.shouldThrowErrorAsync( con );
   })
 
   /* */
@@ -6815,7 +6813,7 @@ function fileCopyAsync( test )
       rewriting : 0,
       throwing : 1,
     });
-    return test.shouldThrowErrorOfAnyKind( con )
+    return test.shouldThrowErrorAsync( con )
   })
 
   /* */
@@ -7026,7 +7024,7 @@ function fileCopyAsync( test )
       rewriting : 0,
       throwing : 1
     });
-    return test.shouldThrowErrorOfAnyKind( con )
+    return test.shouldThrowErrorAsync( con )
     .finally( function()
     {
       var files = provider.dirRead( routinePath );
@@ -7176,7 +7174,7 @@ function fileCopyAsync( test )
     var srcStatExpected = provider.statResolvedRead( srcPath );
     var dstBefore = provider.fileRead( dstPath );
     var dirBefore = provider.dirRead( routinePath );
-    return test.shouldThrowErrorOfAnyKind( () =>
+    return test.shouldThrowErrorAsync( () =>
     {
       return provider.fileCopy
       ({
