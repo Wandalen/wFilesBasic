@@ -3,8 +3,8 @@ root:
   - wFilesBasic.out
 consistency:
   ../will.yml: &ref_0
-    hash: f62b73c45b48999b5aeb37b6a21dd48a
-    size: 7429
+    hash: e034800cbf3b66eaca2196ef59cb6c7c
+    size: 7437
 module:
   wFilesBasic.out:
     about:
@@ -1589,5 +1589,5 @@ module:
           - 'build::npm'
     consistency:
       ../will.yml:
-        hash: f62b73c45b48999b5aeb37b6a21dd48a
-        size: 7429
+        hash: e034800cbf3b66eaca2196ef59cb6c7c
+        size: 7437
